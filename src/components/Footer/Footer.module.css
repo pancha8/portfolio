@@ -1,0 +1,12 @@
+.footer_con {
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 25px 20px;
+}
+
+.footer_con p {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.8;
+}

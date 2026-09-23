@@ -1,0 +1,136 @@
+.hero_wrapper {
+  min-height: 500px; /* เปลี่ยนจาก height: 500px ให้ยืดความสูงตามเนื้อหาจริงได้ */
+  padding: 60px 0; /* เพิ่มพื้นที่บน-ล่างให้ไม่อึดอัด */
+
+  & .container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  & .hero_con {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px; /* ลดจาก 100px เพื่อไม่ให้ดันเนื้อหาลงล่างเกินไป */
+
+    & .hero_info {
+      & .text_1 {
+        font-size: 24px;
+        font-weight: 400;
+        color: #666;
+        letter-spacing: 1px;
+      }
+
+      & .text_2 {
+        font-size: 68px;
+        font-weight: 800;
+        letter-spacing: -1px;
+        line-height: 1.2;
+        padding-bottom: 8px;
+        display: inline-block;
+        margin: 5px 0;
+        background: linear-gradient(135deg, #0085ff 0%, #00d2ff 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      & .text_3 {
+        font-size: 32px;
+        font-weight: 600;
+        color: #222;
+        display: flex;
+        align-items: center;
+      }
+
+      & .text_4 {
+        font-size: 16px;
+        color: #555;
+        line-height: 1.6;
+        margin-top: 20px;
+        max-width: 500px;
+      }
+    }
+
+    & .hero_img {
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      background-image: url("https://images.unsplash.com/photo-1617814076367-b759c7d7e738?q=80&w=500");
+      background-size: cover;
+      background-position: center;
+      box-shadow: 0 20px 40px rgba(0, 133, 255, 0.2);
+    }
+
+    & .hero_social {
+      margin-top: 30px;
+      display: flex;
+      gap: 15px;
+      list-style: none;
+      padding: 0;
+
+      & li {
+        & a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 42px;
+          height: 42px;
+          border-radius: 50%;
+          background: #f0f4f8;
+          transition: all 0.3s ease;
+
+          & svg {
+            width: 22px;
+            height: 22px;
+            color: #0085ff;
+          }
+
+          &:hover {
+            background: #0085ff;
+            transform: translateY(-3px);
+
+            & svg {
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+
+    & .typing-effect {
+      margin-left: 12px;
+      color: #0085ff;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero_wrapper {
+    padding: 40px 0;
+
+    & .hero_con {
+      margin: 20px 0;
+      flex-direction: column-reverse;
+      gap: 30px;
+
+      & .hero_info,
+      & .hero_img {
+        width: 100%;
+        text-align: center;
+      }
+
+      & .hero_info .text_2 {
+        font-size: 48px;
+      }
+
+      & .hero_info .text_3 {
+        justify-content: center;
+      }
+
+      & .hero_social {
+        justify-content: center;
+      }
+    }
+  }
+}

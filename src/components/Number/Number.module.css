@@ -1,0 +1,33 @@
+.number_con {
+  background-color: #0085ff;
+  color: #fff;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.number_items {
+  text-align: center;
+}
+
+.number_items h3 {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.number_items p {
+  font-size: 18px;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+@media screen and (max-width: 600px) {
+  .number_con {
+    flex-direction: column;
+    gap: 40px;
+  }
+}
