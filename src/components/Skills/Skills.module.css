@@ -1,23 +1,25 @@
 .skills_con {
   min-height: 320px;
-  padding: 50px 20px;
-  background-color: #0085ff;
+  padding: 60px 20px;
+  background-color: #1e293b; /* เปลี่ยนจากสีฟ้าสดเป็นสีน้ำเงินเข้มคุมโทน */
   text-align: center;
-  color: #fff;
+  color: #f8fafc;
   overflow: hidden;
 
   & .skills_title {
     font-size: 32px;
     font-weight: 700;
     margin-bottom: 40px;
+    color: #f8fafc;
+    letter-spacing: 0.5px;
   }
 
   & .skills_list {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap; /* ป้องกันไอคอนล้นขอบจอ */
-    gap: 35px; /* จัดระยะห่างระหว่างไอคอนอย่างเป็นระเบียบ */
+    flex-wrap: wrap;
+    gap: 25px;
     list-style: none;
     padding: 0;
     margin: 0 auto;
@@ -27,19 +29,35 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      background: rgba(255, 255, 255, 0.05); /* กล่องการ์ดโปร่งใส */
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      padding: 18px;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: rgba(56, 189, 248, 0.12);
+        border-color: #38bdf8;
+        transform: translateY(-8px);
+        box-shadow: 0 10px 25px rgba(56, 189, 248, 0.25);
+
+        & svg {
+          transform: scale(1.1);
+          color: #38bdf8;
+          filter: drop-shadow(0 0 12px rgba(56, 189, 248, 0.6));
+        }
+      }
     }
 
     & svg {
-      width: 70px;
-      height: 70px;
+      width: 60px;
+      height: 60px;
+      color: #38bdf8;
       transition:
         transform 0.3s ease,
-        filter 0.3s ease;
-      filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
-
-      &:hover {
-        filter: drop-shadow(0 8px 16px rgba(255, 255, 255, 0.5));
-      }
+        filter 0.3s ease,
+        color 0.3s ease;
+      filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
     }
   }
 }
@@ -55,11 +73,15 @@
     }
 
     & .skills_list {
-      gap: 20px;
+      gap: 15px;
+
+      & li {
+        padding: 12px;
+      }
 
       & svg {
-        width: 55px;
-        height: 55px;
+        width: 45px;
+        height: 45px;
       }
     }
   }

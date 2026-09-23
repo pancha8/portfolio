@@ -9,7 +9,8 @@
   font-size: 32px;
   font-weight: 700;
   margin-bottom: 40px;
-  color: #222;
+  color: #f8fafc;
+  letter-spacing: 0.5px;
 }
 
 .portfolio_list {
@@ -21,19 +22,57 @@
 
 .portfolio_items {
   width: 320px;
+  background: #1e293b;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 0 0 20px 0; /* ตัด padding ด้านบนและข้างออก เพื่อให้รูปเต็มกรอบการ์ด */
+  overflow: hidden;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-8px);
+    border-color: #38bdf8;
+    box-shadow: 0 12px 25px rgba(56, 189, 248, 0.25);
+
+    & img {
+      transform: scale(1.05);
+    }
+
+    & .portfolio_title_text {
+      color: #38bdf8;
+    }
+  }
 }
 
 .portfolio_items img {
   width: 100%;
-  height: 220px;
+  height: 200px;
   object-fit: cover;
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  display: block;
+  border-radius: 14px 14px 0 0; /* ปรับมุมโค้งเฉพาะขอบบนให้รับกับมุมการ์ด */
+  transition: transform 0.4s ease;
 }
 
 .portfolio_title_text {
-  margin-top: 15px;
+  margin-top: 18px;
   font-size: 18px;
   font-weight: 600;
-  color: #333;
+  color: #f8fafc;
+  transition: color 0.3s ease;
+}
+
+@media screen and (max-width: 600px) {
+  .portfolio_con {
+    padding: 40px 15px;
+  }
+
+  .portfolio_title {
+    font-size: 26px;
+    margin-bottom: 30px;
+  }
+
+  .portfolio_items {
+    width: 100%;
+    max-width: 350px;
+  }
 }

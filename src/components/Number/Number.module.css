@@ -1,33 +1,68 @@
 .number_con {
-  background-color: #0085ff;
-  color: #fff;
-  padding: 60px 20px;
+  background: transparent;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 80px 20px;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   gap: 30px;
 }
 
 .number_items {
+  flex: 1;
+  min-width: 250px;
+  max-width: 340px;
   text-align: center;
+  padding: 36px 24px;
+  background: rgba(30, 41, 59, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    transform: translateY(-8px);
+    background: rgba(30, 41, 59, 0.7);
+    border-color: rgba(56, 189, 248, 0.4);
+    box-shadow: 0 15px 35px rgba(56, 189, 248, 0.15);
+  }
 }
 
 .number_items h3 {
-  font-size: 48px;
+  font-size: 64px; /* ขยายขนาดตัวเลขให้เด่นชัด */
   font-weight: 800;
-  margin-bottom: 8px;
+  line-height: 1;
+  margin-bottom: 12px;
+  letter-spacing: -2px; /* บีบรอบตัวเลขให้แน่น คม สไตล์ Modern Tech */
+  background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 20px rgba(56, 189, 248, 0.35));
 }
 
 .number_items p {
-  font-size: 18px;
-  font-weight: 500;
-  opacity: 0.9;
+  font-size: 13px; /* ปรับขนาดลงเล็กน้อย */
+  font-weight: 600;
+  color: #94a3b8; /* สีเทาสว่างคุมโทน */
+  text-transform: uppercase; /* ปรับเป็นตัวพิมพ์ใหญ่ */
+  letter-spacing: 1.5px; /* ถ่างระยะอักษรเพิ่มความพรีเมียม */
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   .number_con {
-    flex-direction: column;
-    gap: 40px;
+    padding: 50px 20px;
+    gap: 20px;
+  }
+
+  .number_items {
+    min-width: 100%;
+  }
+
+  .number_items h3 {
+    font-size: 48px;
+    letter-spacing: -1px;
   }
 }

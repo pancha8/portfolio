@@ -1,136 +1,149 @@
 .hero_wrapper {
-  min-height: 500px; /* เปลี่ยนจาก height: 500px ให้ยืดความสูงตามเนื้อหาจริงได้ */
-  padding: 60px 0; /* เพิ่มพื้นที่บน-ล่างให้ไม่อึดอัด */
-
-  & .container {
-    max-width: 1170px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-
-  & .hero_con {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 20px; /* ลดจาก 100px เพื่อไม่ให้ดันเนื้อหาลงล่างเกินไป */
-
-    & .hero_info {
-      & .text_1 {
-        font-size: 24px;
-        font-weight: 400;
-        color: #666;
-        letter-spacing: 1px;
-      }
-
-      & .text_2 {
-        font-size: 68px;
-        font-weight: 800;
-        letter-spacing: -1px;
-        line-height: 1.2;
-        padding-bottom: 8px;
-        display: inline-block;
-        margin: 5px 0;
-        background: linear-gradient(135deg, #0085ff 0%, #00d2ff 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-
-      & .text_3 {
-        font-size: 32px;
-        font-weight: 600;
-        color: #222;
-        display: flex;
-        align-items: center;
-      }
-
-      & .text_4 {
-        font-size: 16px;
-        color: #555;
-        line-height: 1.6;
-        margin-top: 20px;
-        max-width: 500px;
-      }
-    }
-
-    & .hero_img {
-      width: 320px;
-      height: 320px;
-      border-radius: 50%;
-      background-image: url("https://images.unsplash.com/photo-1617814076367-b759c7d7e738?q=80&w=500");
-      background-size: cover;
-      background-position: center;
-      box-shadow: 0 20px 40px rgba(0, 133, 255, 0.2);
-    }
-
-    & .hero_social {
-      margin-top: 30px;
-      display: flex;
-      gap: 15px;
-      list-style: none;
-      padding: 0;
-
-      & li {
-        & a {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          width: 42px;
-          height: 42px;
-          border-radius: 50%;
-          background: #f0f4f8;
-          transition: all 0.3s ease;
-
-          & svg {
-            width: 22px;
-            height: 22px;
-            color: #0085ff;
-          }
-
-          &:hover {
-            background: #0085ff;
-            transform: translateY(-3px);
-
-            & svg {
-              color: #fff;
-            }
-          }
-        }
-      }
-    }
-
-    & .typing-effect {
-      margin-left: 12px;
-      color: #0085ff;
-    }
-  }
+  min-height: 500px;
+  padding: 60px 0;
 }
 
-@media screen and (max-width: 480px) {
-  .hero_wrapper {
-    padding: 40px 0;
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
 
-    & .hero_con {
-      margin: 20px 0;
-      flex-direction: column-reverse;
-      gap: 30px;
+.hero_con {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
 
-      & .hero_info,
-      & .hero_img {
-        width: 100%;
-        text-align: center;
-      }
+.hero_info {
+  max-width: 550px;
+}
 
-      & .hero_info .text_2 {
-        font-size: 48px;
-      }
+/* "Hi, it's me" */
+.text_1 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #38bdf8; /* ปรับเป็นสีฟ้านีออน */
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
 
-      & .hero_info .text_3 {
-        justify-content: center;
-      }
+/* ชื่อ "Panchanan" */
+.text_2 {
+  font-size: 64px;
+  font-weight: 800;
+  letter-spacing: -1.5px;
+  line-height: 1.1;
+  margin: 10px 0;
+  display: inline-block;
+  background: linear-gradient(135deg, #ffffff 30%, #94a3b8 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
-      & .hero_social {
-        justify-content: center;
-      }
-    }
+/* "I'm a Web Developer" */
+.text_3 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #f8fafc; /* แก้จาก #222 เป็นสีขาวสว่าง */
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+/* ข้อความบรรยาย Lorem ipsum... */
+.text_4 {
+  font-size: 16px;
+  font-weight: 400;
+  color: #94a3b8; /* แก้จาก font-color เป็น color และใช้สีเทาสว่าง */
+  line-height: 1.7;
+  margin-top: 15px;
+  max-width: 500px;
+}
+
+.typing-effect {
+  margin-left: 10px;
+  color: #38bdf8;
+  font-weight: 700;
+}
+
+/* รูปภาพ */
+.hero_img {
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background-image: url("https://images.unsplash.com/photo-1617814076367-b759c7d7e738?q=80&w=500");
+  background-size: cover;
+  background-position: center;
+  border: 3px solid #38bdf8;
+  box-shadow: 0 0 35px rgba(56, 189, 248, 0.35);
+  flex-shrink: 0;
+}
+
+/* ปุ่ม Social Icons */
+.hero_social {
+  margin-top: 30px;
+  display: flex;
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+}
+
+.hero_social li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: all 0.3s ease;
+}
+
+.hero_social li a svg {
+  width: 22px;
+  height: 22px;
+  color: #38bdf8;
+}
+
+.hero_social li a:hover {
+  background: #38bdf8;
+  border-color: #38bdf8;
+  transform: translateY(-3px);
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.5);
+}
+
+.hero_social li a:hover svg {
+  color: #0f172a;
+}
+
+/* Responsive มือถือ */
+@media screen and (max-width: 768px) {
+  .hero_con {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .text_2 {
+    font-size: 42px;
+  }
+
+  .text_3 {
+    justify-content: center;
+    font-size: 24px;
+  }
+
+  .hero_img {
+    width: 240px;
+    height: 240px;
+    margin: 0 auto;
+  }
+
+  .hero_social {
+    justify-content: center;
   }
 }
